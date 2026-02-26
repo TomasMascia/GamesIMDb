@@ -2,7 +2,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Web--En--Progreso-blueviolet?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/Tecnología-Flutter--Web-02569B?style=for-the-badge&logo=flutter" alt="Sitio Web">
   <img src="https://img.shields.io/badge/Backend-Firebase-FFCA28?style=for-the-badge&logo=firebase" alt="Firebase">
 </p>
 
