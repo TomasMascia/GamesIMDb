@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games IMDb | Tu Base de Datos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" id="logo-home" style="cursor: pointer;">GAMES<span>IMDb</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" id="nav-home">Inicio</a></li>
+                <li><a href="#" id="nav-categories">Categorías</a></li>
+                <li><a href="#" id="nav-my-list-text">Listas</a></li>
+                <li><a href="#">Amigos</a></li>
+            </ul>
+        </nav>
+        <div class="auth-controls">
+            <button id="btn-auth-open" class="btn-line">Entrar</button>
+            <div id="user-profile" class="user-badge hidden" style="cursor: pointer;">
+                <span id="user-name-display"></span>
+                <div class="avatar-container">
+                    <img id="user-avatar" src="" alt="avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div id="view-home">
+            <section class="carousel-container">
+                <div id="hero-carousel" class="hero-inner">
+                    <p class="loader">Cargando juego destacado...</p>
+                </div>
+            </section>
+            <section class="content">
+                <div id="games-grid" class="game-grid"></div>
+            </section>
+        </div>
+
+        <div id="view-categories" class="hidden">
+            <h2 class="section-title">Explorar Categorías</h2>
+            
+            <div class="category-grid" id="category-selector">
+                <div class="category-card" data-genre="action" style="background-image: url('https://media.rawg.io/media/games/20a/20aa03a10cda45239fe22d035c0ebe64.jpg')"><span>Acción</span></div>
+                <div class="category-card" data-genre="indie" style="background-image: url('https://media.rawg.io/media/games/4cf/4cfc6b7f1850590a4634b08bfab308ab.jpg')"><span>Indie</span></div>
+                <div class="category-card" data-genre="adventure" style="background-image: url('https://media.rawg.io/media/games/b8c/b8c243eaa0fbac8115e0cdccac3f91dc.jpg')"><span>Aventura</span></div>
+                <div class="category-card" data-genre="role-playing-games-rpg" style="background-image: url('https://media.rawg.io/media/games/618/618c2031a07bbff6b4f611f10b6bcdbc.jpg')"><span>RPG</span></div>
+                <div class="category-card" data-genre="shooter" style="background-image: url('https://media.rawg.io/media/games/c4b/c4b0cab189e73432de3a250d8cf1c84e.jpg')"><span>Shooter</span></div>
+                <div class="category-card" data-genre="strategy" style="background-image: url('https://media.rawg.io/media/games/fd9/fd92f105dcd6491bc5d61135033d1f19.jpg')"><span>Estrategia</span></div>
+                <div class="category-card" data-genre="sports" style="background-image: url('https://media.rawg.io/media/games/cc1/cc196a5076e441808f1d374358f27329.jpg')"><span>Deportes</span></div>
+                <div class="category-card" data-genre="racing" style="background-image: url('https://media.rawg.io/media/games/082/082365507c0422daacabd3929057d0aa.jpg')"><span>Carreras</span></div>
+            </div>
+
+            <div id="category-results-section" class="hidden" style="margin-top: 50px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                    <h2 id="category-title-display" class="section-title" style="margin: 0;">Juegos</h2>
+                    <button id="btn-back-categories" class="btn-line">Volver a Categorías</button>
+                </div>
+                <div id="category-games-grid" class="game-grid"></div>
+            </div>
+        </div>
+
+        <div id="view-profile" class="hidden">
+            <section class="profile-header">
+                <div class="profile-info-card">
+                    <div class="profile-avatar-edit">
+                        <img id="profile-img-full" src="" alt="Foto de perfil">
+                    </div>
+                    <div class="profile-text">
+                        <h1 id="profile-name-full">Perfil</h1>
+                        <p id="profile-bio">Cargando biografía...</p>
+                        <div class="profile-actions">
+                            <button id="btn-edit-profile" class="btn-line">Editar Perfil</button>
+                            <button id="btn-logout-profile" class="btn-line btn-danger">Cerrar Sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="user-lists-section">
+                <h2 class="section-title">Mis Listas de Juegos</h2>
+                <div id="user-lists-container" class="lists-wrapper">
+                    <p style="color:#aaa;">Aún no has agregado juegos a tus listas.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
